@@ -69,13 +69,13 @@ body{
 #weather_icon{
     width: 172px;
 }
-.left, .right{
+#left, #right{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.details{
+#details{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
