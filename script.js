@@ -47,7 +47,7 @@ const getWeather = (e) => {
             parentDiv3.appendChild(rightDiv)
             rightDiv.setAttribute("id", "right");
             
-            //putting divs and there values in left and right div 
+            //putting divs and there values in left div 
             const tempF = document.createElement('div')
             tempF.appendChild(document.createTextNode(`Fahrenheit : ${response.data.current.temp_f}°F`))
             leftDiv.appendChild(tempF)
@@ -58,7 +58,7 @@ const getWeather = (e) => {
             humidity.appendChild(document.createTextNode(`Humidity: ${response.data.current.humidity}%`))
             leftDiv.appendChild(humidity)
 
-            //rifht
+            //putting divs and there values in right div 
             const wind_speed = document.createElement('div')
             wind_speed.appendChild(document.createTextNode(`Wind Speed: ${response.data.current.wind_kph}KP/H`))
             rightDiv.appendChild(wind_speed)
