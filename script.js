@@ -43,4 +43,5 @@ let myFunction = () => {
 }
 // getWeatherData();
 
-    // 25175e31b7074cfc895204529222906 key
+    // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key} 
+//b8479188ba00221d2a5d75984a3bec57 key
