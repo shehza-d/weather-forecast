@@ -1,5 +1,24 @@
+console.log(`shehzad`)
 
-{
+// console.log(o1.list[4].weather[0].main)
+// console.log(o1.list[4].weather[0].description)
+
+// console.log(o.list[0].main.temp)
+// console.log(o1.list[0].main.temp)
+// console.log(o1.list[0].main.feels_like)
+// console.log(o1.list[0].main.temp_min)
+// console.log(o1.list[0].main.temp_max)
+// console.log(o1.list[0].main.humidity)
+
+
+// console.log(o1.list[4].weather[0].id)
+// console.log(o1.list[0].main.temp)
+// console.log(o1.list[0].main.temp)
+// console.log(o1.list[0].main.temp)
+// console.log(o1.list[0].main.temp)
+// console.log(o1.list[0].main.temp)
+
+const o1 = {
     "cod": "200",
     "message": 0,
     "cnt": 40,
@@ -19,7 +38,7 @@
             },
             "weather": [
                 {
-                    "id": 803,
+                    "id": 801,
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04n"
@@ -55,7 +74,7 @@
             },
             "weather": [
                 {
-                    "id": 803,
+                    "id": 802,
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04d"
@@ -91,7 +110,7 @@
             },
             "weather": [
                 {
-                    "id": 804,
+                    "id": 803,
                     "main": "Clouds",
                     "description": "overcast clouds",
                     "icon": "04d"
@@ -127,7 +146,7 @@
             },
             "weather": [
                 {
-                    "id": 803,
+                    "id": 804,
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04d"
@@ -163,7 +182,7 @@
             },
             "weather": [
                 {
-                    "id": 803,
+                    "id": 805,
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04d"
@@ -199,7 +218,7 @@
             },
             "weather": [
                 {
-                    "id": 804,
+                    "id": 806,
                     "main": "Clouds",
                     "description": "overcast clouds",
                     "icon": "04n"
@@ -1427,6 +1446,12 @@
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04n"
+                },
+                {
+                    "id": 804,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "06n"
                 }
             ],
             "clouds": {
@@ -1459,3 +1484,8 @@
         "sunset": 1661781263
     }
 }
+// console.log(o1)
+
+// console.log(o1.list[0].main.temp)
+
+

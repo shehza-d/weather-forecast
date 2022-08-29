@@ -60,7 +60,7 @@ body{
     margin-left: 10px;
 }
 
-.main_container {
+#main_container {
     display: flex;
     justify-content: center;
     margin: 18px;
