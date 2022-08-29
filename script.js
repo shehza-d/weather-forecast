@@ -1,22 +1,18 @@
-// "use strict!"
-// import * from "./tem/responce.json";
-console.log("shehzad")
+"use strict!"
+
 const getWeather = (e) => {
     e.preventDefault();
 
     const cityy = document.querySelector("#city").value;
     axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=24.920064&lon=67.0859264&appid=b8479188ba00221d2a5d75984a3bec57`).then((response)=> {
             // handle success
-            const data = response.data;
-            console.log(data);
+            console.log(response.data);
 
             // let icon = response.data.current.condition.icon;
             // icon.replace("/file// ");
             // console.log(icon);
             // document.querySelector("#weather_icon").src = icon;
 
-            // document.querySelector("#tempC").appendChild(document.createTextNode(`${response.data.current.temp_c}°C`))
-           
             const parentDiv1 = document.querySelector('#main_container')
             
             const weatherLocation = document.createElement('p')
@@ -79,8 +75,6 @@ const getWeather = (e) => {
             // document.querySelector("#id").appendChild(document.createTextNode())
             // document.querySelector("#ID").innerText = `${response.data.current.condition.text}`;
         })
-
-
 }
 
 
