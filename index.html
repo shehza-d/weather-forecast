@@ -6,35 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./mobileStyle.css" media="(max-device-width:450px)">
-
+    <!-- FavIcon -->
     <link rel="shortcut icon" type="image/x-icon" href="./img/cloud.png" />
+    <!-- My MAIN JavaScript -->
+    <script defer src="./script.js"></script>
     <!-- Icons CDN link -->
     <script defer src="https://kit.fontawesome.com/6b896963d9.js" crossorigin="anonymous"></script>
     <!-- API Calling -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- My MAIN JavaScript -->
-    <script defer src="./script.js"></script>
+    <!--Moment.JS for Time Management  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </head>
 
 <body>
     <nav class="nav-bar">
         <h1>Weather App </h1>
-
+        <div id="dateDiv">
+            <!-- <div>date</div>
+                 <div>day</div> -->
+        </div>
     </nav>
 
     <div class="body_padding_div">
 
-        <form onsubmit="getWeather(event)" class="formm">
+        <form onsubmit="getWeather(event)" class="form">
             <input type="text" id="city" placeholder="Enter your city name">
-            <!-- <button type="submit">Get Weather</button> -->
         </form>
+        
         <div id="main_container">
             <!-- <div>
                 <img src="" alt="" id="weather_icon">
             </div> -->
-            <div id="tempC"></div>
+            <!-- <div id="tempC"></div> -->
         </div>
 
 
@@ -58,8 +64,8 @@
         </div>
 
 
-        <div id="forecast">
-            <details>
+        <div id="forecast" border="2px">
+            <!-- <details>
                 <summary>Epcot Center</summary>
                 <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
                     pavilions, award-winning fireworks and seasonal special events.</p>
@@ -68,7 +74,7 @@
                 <summary>Epcot Center</summary>
                 <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
                     pavilions, award-winning fireworks and seasonal special events.</p>
-            </details>
+            </details> -->
         </div>
 
 
@@ -88,7 +94,7 @@
 
 
 
-<a href="./tem/index.html">anchor</a>
+    <!-- <a href="./tem/index.html">anchor</a> -->
 
 
     <footer>
@@ -135,12 +141,21 @@
 
         </ul>
     </footer>
+
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD95UmIs7F-rZFEkF2ErNAmyaphBz3KZBo&libraries=places&callback=initAutocomplete" defer></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script> -->
-
-    <!-- how to call labraiy in JS 
-.json
-axios -->
 </body>
 
 </html>
+<!-- notes
+    add responsiveness
+    add chart 
+    add date and time
+    add dark mode
+    add auto location get
+
+    
+    how to call labraiy in JS 
+    .json
+    axios
+-->
