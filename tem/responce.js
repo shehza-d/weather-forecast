@@ -3,7 +3,6 @@ console.log(`shehzad`)
 // console.log(o1.list[4].weather[0].main)
 // console.log(o1.list[4].weather[0].description)
 
-// console.log(o.list[0].main.temp)
 // console.log(o1.list[0].main.temp)
 // console.log(o1.list[0].main.feels_like)
 // console.log(o1.list[0].main.temp_min)

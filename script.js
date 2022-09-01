@@ -40,28 +40,43 @@ const getWeather = (e) => {
         })
 }
 const showWeatherData = (data) => {
+        removeOldData();
+
         const parentDiv1 = document.querySelector('#main_container')
 
         const weatherLocation = document.createElement('div')
-        weatherLocation.appendChild(document.createTextNode(`Weather of ${data.city.name}`))//${response.data.city.name}
+        weatherLocation.appendChild(document.createTextNode(`Today's Weather of ${data.city.name}`))//${response.data.city.name}
         parentDiv1.appendChild(weatherLocation)
         weatherLocation.setAttribute("class", "city_name");
         const tempC = document.createElement('div')
-        tempC.appendChild(document.createTextNode(`27°C`))
+        tempC.appendChild(document.createTextNode(`${data.list[0].main.temp}°C`))
         parentDiv1.appendChild(tempC)
         tempC.setAttribute("id", "tempC");
         // ${response.data.current.temp_c}
+        const icon = document.createElement('img')
+        icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`)
+        parentDiv1.appendChild(icon)
+
 
 
         const parentDiv2 = document.querySelector('#parentDiv2')
 
         const conditionDiv = document.createElement('div')
-        conditionDiv.appendChild(document.createTextNode(`${data.list[4].weather[0].main}`))
+        conditionDiv.appendChild(document.createTextNode(`${data.list[0].weather[0].main}`))
         parentDiv2.appendChild(conditionDiv)
         const conditionSpan = document.createElement('span')
-        conditionSpan.appendChild(document.createTextNode(`${data.list[4].weather[0].description}`))
+        conditionSpan.appendChild(document.createTextNode(`${data.list[0].weather[0].description}`))
         parentDiv2.appendChild(conditionSpan)
         // // newDiv.setAttribute("id", "city_name");
+        console.log(`Humidity ${data.list[0].main.humidity} %`)
+        console.log(`Pressure ${data.list[0].main.pressure}`)
+        console.log(`Sea Level ${data.list[0].main.sea_level}`)
+        console.log(`Min Temperature ${data.list[0].main.temp_min}°C`)
+        console.log(`Max Temperature ${data.list[0].main.temp_max}°C`)
+        console.log(`Visibility ${data.list[0].visibility} M`)
+        console.log(`Wind Speed ${data.list[0].wind.speed} KM`)
+        console.log(`Wind Direction ${data.list[0].wind.deg} KM`)
+
 
         // //created left and right div
         // const parentDiv3 = document.querySelector('#details')
@@ -109,12 +124,52 @@ const showWeatherData = (data) => {
 }
 
 
+//removing old data from DOM before adding new
+const removeOldData = () => {
+        console.log(` remove date`)
+
+}
 
 
 
 
+{
+        const forecastDiv = document.querySelector('#forecastDiv');
+        const myChart = document.createElement('canvas');
+        myChart.setAttribute('id', 'myChart');
+        // forecastDiv.appendChild(myChart);
 
 
+        // let myChart = document.querySelector('#myChart').getContext('2d');
+
+        //Global Options
+        // Chart.defaults.global.defaultFontFamily = 'Roboto';
+        // Chart.defaults.global.defaultFontSize =18;
+        // Chart.defaults.global.defaultFontColor =;
+        // Chart.defaults.global.default =;
+
+        let weatherChart = new Chart(myChart, {
+                type: 'bar', //types we can have bar,horizontal bar, pie, line, doughnut, radar, polarArea.
+                data: {
+                        labels: ['Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
+                        datasets: [{
+                                label: 'TEMPERATURE FORECAST',
+                                data: [45, 32, 19, 32, 25, 45, 32, 19, 32, 25],
+                                backgroundColor: 'rgba(100, 255, 100, 1)',
+                                borderWidth: 3,
+                                borderColor: 'blue',
+                                hoverBorderWidth: 6,
+                                hoverBorderColor: 'rgba(255, 255, 255, 1)',
+                        }],
+                },
+                Options: {
+                        title:{
+                                display: true,
+                                text: 'Weather'
+                        }
+                }
+        });
+}
 
 
 

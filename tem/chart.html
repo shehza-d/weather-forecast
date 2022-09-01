@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+		integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+	<div id="forecastDiv" border="2px">
+		<script>
+			const forecastDiv = document.querySelector('#forecastDiv');
+			const myChart = document.createElement('canvas');
+			myChart.setAttribute('id', 'myChart');
+			forecastDiv.appendChild(myChart);
+
+
+			// let myChart = document.querySelector('#myChart').getContext('2d');
+
+			//Global Options
+			// Chart.defaults.global.defaultFontFamily = 'Roboto';
+			// Chart.defaults.global.defaultFontSize =18;
+			// Chart.defaults.global.defaultFontColor =;
+			// Chart.defaults.global.default =;
+
+			const weatherChart = new Chart(myChart, {
+				type: 'line', //types we can have bar,horizontal bar, pie, line, doughnut, radar, polarArea.
+				data: {
+					labels: ['Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
+					datasets: [{
+						label: 'TEMPERATURE',
+						data: [45, 32, 19, 32, 25, 45, 32, 19, 32, 25, 45, 32, 19, 32, 25, 45, 32, 19, 32, 25],
+						backgroundColor: 'rgba(100, 255, 100, 1)',
+						borderWidth: 3,
+						borderColor: 'blue',
+						hoverBorderWidth: 6,
+						hoverBorderColor: 'rgba(255, 255, 255, 1)',
+					}//idher , laga kar jitne marzi data set do  ye array of objects hy
+				],
+				},
+				options: {
+					title: {
+						display: true,
+						text: 'Weather FORECAST',
+						fontSize:25
+					},
+					legend:{
+						display: true,
+						// text: 'Temperature',
+						padding: 5,
+						borderWidth: 1
+					},
+					layout:{
+						padding: {
+						left:3,
+						right:3,
+						bottom:10,
+						top:10
+						}
+					}
+				}
+			});
+
+		</script>
+		<style>
+			/* #forecastDiv{
+				width: 900px;
+				height: 1500px;
+			} */
+			#myChart {
+				
+				border: 5px solid red;
+				background-color: aqua;
+			}
+		</style>
+</body>
+
+</html>
