@@ -57,7 +57,7 @@ const showWeatherData = (data) => {
         icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`)
         parentDiv1.appendChild(icon)
 
-
+// parentDIVs ko detailDivs se merge karna hy
 
         const parentDiv2 = document.querySelector('#parentDiv2')
 
@@ -76,6 +76,8 @@ const showWeatherData = (data) => {
         console.log(`Visibility ${data.list[0].visibility} M`)
         console.log(`Wind Speed ${data.list[0].wind.speed} KM`)
         console.log(`Wind Direction ${data.list[0].wind.deg} KM`)
+
+
 
 
         // //created left and right div
@@ -112,6 +114,45 @@ const showWeatherData = (data) => {
         console.log(`${data.city.name}'s Latitude is ${data.city.coord.lat} and Longitude is ${data.city.coord.lon}`)
 
 
+        //Chart making start
+        const forecastDiv = document.querySelector('#forecastDiv');
+        const myChart = document.createElement('canvas');
+        myChart.setAttribute('id', 'myChart');
+        // forecastDiv.appendChild(myChart);
+        let tempOfFiveDays = []
+        for (let i = 0; i < data.list.length; i++) {
+                tempOfFiveDays[i] = data.list[i].main.temp
+        }
+        // let myChart = document.querySelector('#myChart').getContext('2d');
+        const weatherChart = new Chart(myChart, {
+                type: 'line',
+                data: {
+                        labels: ['Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
+                        datasets: [{
+                                label: 'TEMPERATURE FORECAST',
+                                data: tempOfFiveDays,
+                                backgroundColor: 'rgba(255, 255, 255, 1)',
+                                borderWidth: 4,
+                                borderColor: 'blue',
+                                hoverBorderWidth: 6,
+                                hoverBorderColor: 'rgba(255, 255, 255, 1)',
+                        }],
+                },
+                Options: {
+                        title: {
+                                display: true,
+                                text: 'Weather'
+                        }
+                }
+        });
+        //chart end
+
+
+
+
+
+
+
 
         // const wind_speed = document.createElement('div')
         // wind_speed.appendChild(document.createTextNode(`Wind Speed: ${response.data.current.wind_kph}KP/H`))
@@ -133,43 +174,6 @@ const removeOldData = () => {
 
 
 
-{
-        const forecastDiv = document.querySelector('#forecastDiv');
-        const myChart = document.createElement('canvas');
-        myChart.setAttribute('id', 'myChart');
-        // forecastDiv.appendChild(myChart);
-
-
-        // let myChart = document.querySelector('#myChart').getContext('2d');
-
-        //Global Options
-        // Chart.defaults.global.defaultFontFamily = 'Roboto';
-        // Chart.defaults.global.defaultFontSize =18;
-        // Chart.defaults.global.defaultFontColor =;
-        // Chart.defaults.global.default =;
-
-        let weatherChart = new Chart(myChart, {
-                type: 'bar', //types we can have bar,horizontal bar, pie, line, doughnut, radar, polarArea.
-                data: {
-                        labels: ['Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
-                        datasets: [{
-                                label: 'TEMPERATURE FORECAST',
-                                data: [45, 32, 19, 32, 25, 45, 32, 19, 32, 25],
-                                backgroundColor: 'rgba(100, 255, 100, 1)',
-                                borderWidth: 3,
-                                borderColor: 'blue',
-                                hoverBorderWidth: 6,
-                                hoverBorderColor: 'rgba(255, 255, 255, 1)',
-                        }],
-                },
-                Options: {
-                        title:{
-                                display: true,
-                                text: 'Weather'
-                        }
-                }
-        });
-}
 
 
 

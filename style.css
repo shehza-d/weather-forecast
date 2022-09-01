@@ -59,14 +59,20 @@ body {
     color: rgb(255, 255, 255);
     /* text-align: center; */
 }
-
+.city_name{
+    text-shadow: 3px 3px 4px #000000;
+}
 #tempC {
     font-size: 150px;
     font-weight: bold;
     color: rgb(14, 14, 14);
     margin-left: 10px;
+    text-shadow: 2px 2px 8px #000000;
 }
+.parentDiv2{
+    text-shadow: 3px 3px 4px #000000;
 
+}
 #main_container {
     display: flex;
     justify-content: center;
@@ -79,7 +85,19 @@ body {
 #weather_icon {
     width: 172px;
 }
-
+#forecastDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #fffc3a; */
+    border-radius: 12px;
+    width: 80%;
+}
+#myChart{
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+}
 #left,
 #right {
     display: flex;
