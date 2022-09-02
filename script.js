@@ -168,6 +168,12 @@ const showWeatherData = (data) => {
 //removing old data from DOM before adding new
 const removeOldData = () => {
         console.log(` remove date`)
+        // document.querySelector('#').innerHTML = '';
+        document.querySelector('#main_container').innerHTML = '';
+        document.querySelector('#parentDiv2').innerHTML = '';
+        document.querySelector('#details').innerHTML = '';
+        document.querySelector('#forecastDiv').innerHTML = '';
+        // document.querySelector('#').innerHTML = '';
 
 }
 

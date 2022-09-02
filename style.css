@@ -60,16 +60,18 @@ body {
     /* text-align: center; */
 }
 .city_name{
+    color: rgb(255, 255, 255);
     text-shadow: 3px 3px 4px #000000;
 }
 #tempC {
     font-size: 150px;
     font-weight: bold;
-    color: rgb(14, 14, 14);
+    color: rgb(255, 255, 255);
     margin-left: 10px;
     text-shadow: 2px 2px 8px #000000;
 }
 .parentDiv2{
+    color: rgb(255, 255, 255);
     text-shadow: 3px 3px 4px #000000;
 
 }
