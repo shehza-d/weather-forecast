@@ -117,8 +117,8 @@ const showWeatherData = (data) => {
         //Chart making start
         const forecastDiv = document.querySelector('#forecastDiv');
         const myChart = document.createElement('canvas');
-        myChart.setAttribute('id', 'myChart');
-        // forecastDiv.appendChild(myChart);
+        // myChart.setAttribute('id', 'myChart');
+        forecastDiv.appendChild(myChart);
         let tempOfFiveDays = []
         for (let i = 0; i < data.list.length; i++) {
                 tempOfFiveDays[i] = data.list[i].main.temp
@@ -127,7 +127,7 @@ const showWeatherData = (data) => {
         const weatherChart = new Chart(myChart, {
                 type: 'line',
                 data: {
-                        labels: ['Weather', 'Temperature', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
+                        labels: ['Weather', 'saad bhia', 'karachi', 'lahore', 'islamabad', 'Weather', 'Temperature', 'karachi', 'lahore', 'islamabad'],
                         datasets: [{
                                 label: 'TEMPERATURE FORECAST',
                                 data: tempOfFiveDays,
